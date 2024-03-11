@@ -23,13 +23,13 @@ public class LoginController {
 
     @RequestMapping("/formLogin")
     public String formLogin() {
-        return "/login";
+        return "Booking_Hotel/Client/login";
     }
 
     @RequestMapping("/loginFail")
     public String failureForwardUrl(Model model) {
         model.addAttribute("message", "Tài khoản không tồn tài");
-        return "/login";
+        return "Booking_Hotel/Client/login";
     }
 
 
@@ -47,14 +47,14 @@ public class LoginController {
                 Optional<Account> optionalAccount = accountService.findByEmail(userDetails.getUsername());
                 if (optionalAccount.isPresent()) {
                     session.setAttribute("acc", optionalAccount.get());
-                    return "Booking_Hotel/User/HomePage/index";
+                    return "Booking_Hotel/Client/index";
                 } else {
                     System.err.println("Không tìm thấy tài khoản liên kết");
-                    return "/login";
+                    return "Booking_Hotel/Client/login";
                 }
             } else {
                 System.err.println("Không có thông tin xác thực");
-                return "/login";
+                return "Booking_Hotel/Client/login";
             }
         } else {
             System.err.println("Không có thông tin xác thực");
