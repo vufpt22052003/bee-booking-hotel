@@ -641,6 +641,118 @@ h1 {
   background: #da3c3c;
 }
 
+/* Search styling */
+.banner {
+  position: relative;
+  filter: brightness(70%);
+}
+.search {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(10, 29, 53, 0.9);
+  padding: 60px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #0a1d35;
+}
+
+.search-title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 55px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.search form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.search form input,select {
+  width: 240px;
+  padding: 10px 20px;
+  background: #e6e6e6;
+  border-radius: 5px;
+  border: none;
+}
+
+.search form button {
+  width: 120px;
+  background: #da3c3c;
+  font-size: 18px;
+  font-weight: bold;
+  color: #e1e1e2;
+  border-radius: 5px;
+  transition: all .3s;
+}
+
+.search form button:hover {
+  background: #0a1d35;
+  color: #da3c3c;
+  border: 1px solid #da3c3c;
+}
+
+.result-rooms {
+  padding: 30px 10%;
+}
+
+.result-rooms h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.result-container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: space-around;
+}
+
+.result-item {
+  background-color: #0a1d35;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.result-item img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.result-name {
+  font-size: 24px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.result-price {
+  font-size: 18px;
+  color: #da3d3d;
+  margin-top: 10px;
+}
+
+.result-item button {
+  background: #da3d3d;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  transition: all .3s;
+  color: #fff;
+  font-weight: bold;
+}
+
+.result-item button:hover {
+  transform: scale(1.03);
+}
+
 /* Login styling */
 .login-container {
   margin-top: 100px;
